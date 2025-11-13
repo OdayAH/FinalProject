@@ -1,10 +1,7 @@
 import { create } from 'zustand'
 
-const useBear = create((set) => ({
-  bears: 0,
-  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
-  updateBears: (newBears) => set({ bears: newBears }),
+export const useStore = create((set) => ({
+  isLoggedIn: true,
 }))
 
-
+export default useStore

@@ -1,9 +1,223 @@
+import Filter from "./components/Filter";
+import Header from "./components/Header";
+import ProductGallery from "./components/ProductGallery";
+
+  export const products = [
+  {
+    id: "p1",
+    name: "Oversized Hoodie",
+    storeName: "CozyWear",
+    price: 60,
+    stock: 37,
+    inStock: true,
+    image: "https://img.fruugo.com/product/5/45/1683742455_0340_0340.jpg",
+    category: "Clothing",
+  },
+  {
+    id: "p2",
+    name: "Wireless Headphones",
+    storeName: "SoundHub",
+    price: 150,
+    stock: 18,
+    inStock: true,
+    image: "https://avantree.com/cdn/shop/files/quartet-2-5049P-m1.png?v=1730948992",
+    category: "Electronics",
+  },
+  {
+    id: "p3",
+    name: "Ceramic Mug",
+    storeName: "HomeVibes",
+    price: 15,
+    stock: 4,
+    inStock: true,
+    image: "https://m.media-amazon.com/images/I/51+jiwSv67L._AC_UF894,1000_QL80_.jpg",
+    category: "Home",
+  },
+  {
+    id: "p4",
+    name: "Running Sneakers",
+    storeName: "StepUp",
+    price: 90,
+    stock: 0,
+    inStock: false,
+    image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5",
+    category: "Shoes",
+  },
+  {
+    id: "p5",
+    name: "Mechanical Keyboard 65%",
+    storeName: "ClickClack",
+    price: 120,
+    stock: 25,
+    inStock: true,
+    image: "https://www.alpheriorkeys.com/cdn/shop/products/1_4c2904ab-b7bd-4562-afeb-0d13d7acc019_1024x.png?v=1613079188",
+    category: "Electronics",
+  },
+  {
+    id: "p6",
+    name: "Sports Water Bottle",
+    storeName: "FitLife",
+    price: 12,
+    stock: 50,
+    inStock: true,
+    image: "https://www.alpinpro.com/wp-content/uploads/2024/07/Q-1000.jpg",
+    category: "Sports",
+  },
+  {
+    id: "p7",
+    name: "Smartwatch Lite",
+    storeName: "TechZone",
+    price: 75,
+    stock: 30,
+    inStock: true,
+    image: "https://ae01.alicdn.com/kf/S517c33dc492f48839ab8781a533eeae9Z.jpg",
+    category: "Electronics",
+  },
+  {
+    id: "p8",
+    name: "Minimalist Backpack",
+    storeName: "UrbanCarry",
+    price: 45,
+    stock: 22,
+    inStock: true,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPpuh-5lJVycwB9E1SNZU_SWatGoqBcPwug&s",
+    category: "Bags",
+  },
+  {
+    id: "p9",
+    name: "Gaming Mouse RGB",
+    storeName: "ClickClack",
+    price: 35,
+    stock: 40,
+    inStock: true,
+    image: "https://i5.walmartimages.com/seo/TSV-RGB-Gaming-Mouse-Wired-USB-Computer-Mice-PC-Gaming-Mice-Ergonomic-Optical-Mice-4-Adjustable-DPI-RGB-Backlit-LED-Desktop-Laptop-Windows-Mac-Vista_a9adecbf-e701-4847-a056-76072a1e8f3a.f4c121938dc6aff1ae6239569016e844.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+    category: "Electronics",
+  },
+  {
+    id: "p10",
+    name: "Cotton T-Shirt",
+    storeName: "CozyWear",
+    price: 20,
+    stock: 60,
+    inStock: true,
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    category: "Clothing",
+  },
+  {
+    id: "p11",
+    name: "Table Lamp Modern",
+    storeName: "HomeVibes",
+    price: 28,
+    stock: 12,
+    inStock: true,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTJyeeLPBHFq24LYnxPkvz55m0MOtxN8Vzow&s",
+    category: "Home",
+  },
+  {
+    id: "p12",
+    name: "Yoga Mat",
+    storeName: "FitLife",
+    price: 30,
+    stock: 18,
+    inStock: true,
+    image: "https://m.media-amazon.com/images/I/81wBWlZ3bpL._AC_UF1000,1000_QL80_.jpg",
+    category: "Sports",
+  },
+  {
+    id: "p13",
+    name: "Scented Candle",
+    storeName: "HomeVibes",
+    price: 10,
+    stock: 45,
+    inStock: true,
+    image: "https://nuhrhome.com/cdn/shop/files/NUHR-Home-Oud-Arabia-Luxury-Scented-Candle.jpg?v=1718565896",
+    category: "Home",
+  },
+  {
+    id: "p14",
+    name: "Bluetooth Speaker Mini",
+    storeName: "SoundHub",
+    price: 25,
+    stock: 20,
+    inStock: true,
+    image: "https://ss7.vzw.com/is/image/VerizonWireless/a3101za3-iset/?wid=465&hei=465&fmt=webp",
+    category: "Electronics",
+  },
+  {
+    id: "p15",
+    name: "Leather Wallet",
+    storeName: "UrbanCarry",
+    price: 35,
+    stock: 13,
+    inStock: true,
+    image: "https://luffyleathers.com/wp-content/uploads/2024/01/DSC06400-430x430.jpg.webp",
+    category: "Accessories",
+  },
+  {
+    id: "p16",
+    name: "Office Chair Ergonomic",
+    storeName: "HomeVibes",
+    price: 180,
+    stock: 7,
+    inStock: true,
+    image: "https://cdn11.bigcommerce.com/s-sp9oc95xrw/images/stencil/590x590/products/29379/92181/c214__54792.1725884564.png?c=2",
+    category: "Furniture",
+  },
+  {
+    id: "p17",
+    name: "Laptop Stand",
+    storeName: "TechZone",
+    price: 22,
+    stock: 33,
+    inStock: true,
+    image: "https://image.made-in-china.com/2f0j00zehRcWiylnkZ/Height-Adjustable-Laptop-Stand-with-Soft-Foam-Cushion-Small-Desk.webp",
+    category: "Accessories",
+  },
+  {
+    id: "p18",
+    name: "Sports Hoodie",
+    storeName: "FitLife",
+    price: 55,
+    stock: 29,
+    inStock: true,
+    image: "https://img.freepik.com/premium-vector/softball-hoodie-template_506367-186.jpg?semt=ais_hybrid&w=740&q=80",
+    category: "Clothing",
+  },
+  {
+    id: "p19",
+    name: "4K Monitor 27-inch",
+    storeName: "TechZone",
+    price: 320,
+    stock: 11,
+    inStock: true,
+    image: "https://www.mobilepixels.us/cdn/shop/files/4_e8fc032d-1a11-4f09-a9ea-233f67b363e4.jpg?v=1731910189&width=1400",
+    category: "Electronics",
+  },
+  {
+    id: "p20",
+    name: "Leather Pouch",
+    storeName: "DailyBrew",
+    price: 20,
+    stock: 50,
+    inStock: true,
+    image: "https://www.alberttusk.com/cdn/shop/products/The_Small_Pouch-2.jpg?v=1589736931",
+    category: "Grocery",
+  },
+];
+
 function App() {
+  
   return (
     <>
-      
+      <Header />
+      <div className="flex gap-6">
+        <Filter />
+        <div className="h-[calc(100vh-80px)] overflow-y-auto pr-2">
+          <ProductGallery products = {products}/>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
